@@ -210,6 +210,10 @@ internal static class Program
     private static void DibujarMatrices()
     {
         Vector2[] originales = { new(1, 2), new(0, 0), new(-1, 2) };
+        // La matriz identidad es la que no cambia nada. La otra es un ejemplo de transformación.
+        // La matriz ejemplo es: [2 0 4; 0 1 -1; 0 0 1], que escala X por 2, traslada X por +4 y Y por -1.
+        // eso de arriba me lo dio el auto relleno de vs code, que loco
+        // solo queria hacer un comentario para acordarme de que esto es lo que debo modificar para hacer pruebas con otras matrices
         float[,] matriz = identidad ? Identidad() : new float[,] { { 2, 0, 3 }, { 0, 1, -1 }, { 0, 0, 1 } };
         Poligono(originales, Identidad(), AnclaVisual, Color.Gray);
         Poligono(originales, matriz, AnclaVisual, Color.DarkBlue);
